@@ -102,7 +102,7 @@ The critic network maps state and action to Q value and has the following struct
 | Critic learning rate | lr_critic | 5e-4 | 5e-4 | Controls parameters update of the online critic model |
 | Target update mix | target_mix | 5e-2 | 5e-2  | Controls parameters update of the target actor and critic models |
 | Discount factor | discount | .99 | .99  | Discount rate for future rewards |
-| Noise amplificatio | epsilon | 1 | 1 | What percentage of the noise should we use when adding it to agents' actions |
+| Noise amplification | epsilon | 1 | 1 | What percentage of the noise should we use when adding it to agents' actions |
 | Noise amplification decay | epsilon_decay | 1 | .99 | With what rate should the noise added to agents' actions be downplayed/de-amplified/decay during the experiment |
 | Learn every| learn_every | 2 | 2 | After how may timesteps should the agents are allowed to learn |
 | Learn numner| learn_number | 1 | 1 | How many times should optimization run after the agents are allowed to learn (disabled here) |
@@ -125,7 +125,8 @@ at the later training stages, resulting in very unstable training. The following
 
 ![first_run_maddpg](resources/initial_run_scores.png)
 
-You can find the saved models for the first run under the `MADDPG/saved_models/run_1` folder.
+This run took 1343 episodes to solve the environment. You can find the saved models for the first run under the 
+`MADDPG/saved_models/run_1` folder.
 
 What won the day:
 * Reducing the standard deviation of the noise function.
@@ -137,7 +138,8 @@ What won the day:
 Note that the above experiment was halted at step 1247 due to proving that the training has stabilised (and was 
 increasingly learning) well above the required criteria of .5 score.
 
-You can find the saved models for the first run under the `MADDPG/saved_models/run_2` folder.
+This run took 1013 episodes to solve the environment. You can find the saved models for the first run under the 
+`MADDPG/saved_models/run_2` folder.
 
 #### Future work
 
